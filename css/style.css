@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+/*Utility Section*/
+body{
+    background: #252529;
+    font-family: 'PT Sans','sans-serif';
+    line-height: 1.6;
+    color: #fff;
+    margin: 0;
+}
+
+.container{
+    max-width: 1190px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.lead{
+    font-size: 1.3rem;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn{
+    padding: 1rem;
+    display: inline-block;
+    color: #fff;
+}
+
+/*CSS Variables*/
+:root{
+    --primary-color:#b90415;
+    --primary-color-hover:#d3071b;
+    --secondary-color:#103063;
+    --secondary-color-hover:#143f85;
+    --light-color:#f4f4f4;
+}
+
+/*showcase section*/
+#showcase{
+    overflow-y: hidden;
+    background: url('../img/showcase.jpg') no-repeat center/cover;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+}
+#showcase nav{
+    background-color: #333;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    color: #fff;
+}
+
+#showcase ul{
+    margin: 0;
+    padding: 0;
+}
+
+#showcase li{
+    display: inline;
+    float: left;
+}
+
+#showcase a{
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    display: inline-block;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#showcase li:hover{
+    background: #444;
+}
+
+
+#showcase a#openup{
+    display: none;
+}
+
+#showcase .container{
+    margin-top: 25vh;
+}
+
+#showcase h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+#showcase h2{
+    font-size: 2rem;
+}
+
+.section{
+    padding: 2rem 0;
+}
+
+
+
+/*Music Section*/
+
+.btn-primary{
+    background: var(--primary-color);
+}
+
+.section a:hover{
+    background: var(--primary-color-hover);
+}
+
+.section h3{
+    font-size: 2rem;
+}
+
+.section-head{
+    font-size: 2.5rem;
+    padding: 0;
+}
+
+/*Video Section*/
+.bg-light{
+    background: var(--light-color);
+    color: #333;
+}
+
+.btn-secondary{
+    background: var(--secondary-color);
+}
+
+a.btn-secondary:hover{
+    background: var(--secondary-color-hover);
+}
+
+
+/*Entertainment setion*/
+section#entertainment{
+    background: url('../img/section-bg.jpg') no-repeat bottom/cover;
+    padding: 10rem 0;
+}
+
+/*Gift Cards Section*/
+.text-secondary{
+    color: var(--secondary-color);
+}
+
+a.text-secondary:hover{
+    background: var(--light-color);
+}
+
+.gift-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    text-align: left;
+}
+
+/*footer section*/
+footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    padding: 2rem;
+    text-align: left;
+    font-size: 14px;
+}
+
+footer .footer-cols ul{
+    list-style-type: none;
+}
+
+footer .footer-cols ul li:first-child{
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+.text-center{
+    text-align: center;
+    background: #444;
+    padding: 1rem 0;
+}
+
+.mb{
+    margin-bottom: 1rem;
+}
+
+.mt{
+    margin-top: 1rem;
+}
+
+/*Media Queries*/
+@media screen and (max-width:580px){
+    .hide-on-small{
+        display: none;
+    }
+
+    #showcase{
+        height: 50vh;
+    }
+
+    #showcase .container{
+        margin-top: 15vh;
+    }
+
+    #showcase h1{
+        font-size: 3rem;
+    }
+
+    #showcase h2{
+        font-size: 1.5rem;
+    }
+    nav{
+        height: auto;
+        border-bottom: 0;
+    }
+
+    nav ul{
+        display: none;
+        height: auto;
+    }
+
+    nav li{
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+
+    nav a{
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        background: #333333;
+        border-bottom: 1px solid #555;
+    }
+
+    nav a:hover{
+        background: #444;
+    }
+
+    nav a#openup::after{
+        content: '|||';
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+
+        /*IE 9*/
+        -webkit-transform: rotate(-90deg);
+
+        /*Safari*/
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+    }
+
+    nav a#openup{
+        display: block;
+        background-color: #333;
+        width: 100%;
+        position: relative;
+    }
+}
+
+.cf:before, .cf:after{
+    content: "";
+    display: table;
+}
+
+.cf:after{
+    clear: both;
+}
+
+.cf{
+    zoom: 1;
+}
+
+@media screen and (max-width:780px){
+    .gift-cards{
+        grid-template-columns: 1fr;
+    }
+    footer .footer-cols{
+        display: none;
+    }
+}
+
+/*FOR LANDSCAPE VIEW IN IPADS*/
+@media screen and (max-height:580px){
+    #showcase p.lead{
+        display: none;
+    }
+}
